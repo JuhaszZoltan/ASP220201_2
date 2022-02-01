@@ -1,0 +1,12 @@
+﻿@model ASP220201_2.Models.Ugyfel
+
+@{ 
+    string nagykoruString = Model.Nagykoru ? "IGEN" : "NEM";
+}  
+
+<h2>Reszletek</h2>
+
+<p>ID: @Model.Id</p>
+<p>név: @Model.Nev</p>
+<p>született: @Model.Szuletett.ToString("yyyy. MMMM dd.")</p>
+<p>nagykorú? @nagykoruString</p>

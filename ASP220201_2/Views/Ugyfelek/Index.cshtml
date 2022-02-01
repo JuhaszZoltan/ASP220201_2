@@ -1,0 +1,23 @@
+﻿@model ASP220201_2.Models.UgyfelListaViewModel
+
+<h2>Ügyfelek listája</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Név</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ugyfel in Model.Ugyfelek)
+        {
+        <tr>
+            <td>@ugyfel.Id</td>
+            @*<td><a href="\Ugyfelek\Reszletek\@ugyfel.Id">@ugyfel.Nev</a></td>*@
+            <td>@Html.ActionLink($"{ugyfel.Nev}", "Reszletek", "Ugyfelek", new { id = ugyfel.Id }, null)</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
